@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/noe/Documents/GitHub/EGUI_TP2/lab2/lab2.csproj": {}
+    "C:\\Users\\ender\\OneDrive\\Documents\\GitHub\\EGUI_TP2\\lab2\\lab2.csproj": {}
   },
   "projects": {
-    "/home/noe/Documents/GitHub/EGUI_TP2/lab2/lab2.csproj": {
+    "C:\\Users\\ender\\OneDrive\\Documents\\GitHub\\EGUI_TP2\\lab2\\lab2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/noe/Documents/GitHub/EGUI_TP2/lab2/lab2.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\OneDrive\\Documents\\GitHub\\EGUI_TP2\\lab2\\lab2.csproj",
         "projectName": "lab2",
-        "projectPath": "/home/noe/Documents/GitHub/EGUI_TP2/lab2/lab2.csproj",
-        "packagesPath": "/home/noe/.nuget/packages/",
-        "outputPath": "/home/noe/Documents/GitHub/EGUI_TP2/lab2/obj/",
+        "projectPath": "C:\\Users\\ender\\OneDrive\\Documents\\GitHub\\EGUI_TP2\\lab2\\lab2.csproj",
+        "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ender\\OneDrive\\Documents\\GitHub\\EGUI_TP2\\lab2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/noe/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +39,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/162/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

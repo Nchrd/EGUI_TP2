@@ -28,4 +28,10 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    public ActionResult SignUp()
+    {
+        ViewBag.Message = "User sign up";
+        return View();
+    }
 }
