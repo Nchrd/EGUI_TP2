@@ -1,0 +1,6 @@
+C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP2\BlogDataBase\bin\Debug\BlogDataBase.dacpac
+C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP2\BlogDataBase\bin\Debug\BlogDataBase.dll
+C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP2\BlogDataBase\bin\Debug\BlogDataBase.pdb
+C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP2\BlogDataBase\obj\Debug\BlogDataBase.sqlproj.AssemblyReference.cache
+C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP2\BlogDataBase\obj\Debug\BlogDataBase.dll
+C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP2\BlogDataBase\obj\Debug\BlogDataBase.pdb

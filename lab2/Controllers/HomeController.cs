@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using lab2.Models;
+using static DataLibrary.BusinessLogic.UserProcessor;
 
 namespace lab2.Controllers;
 
@@ -34,4 +35,35 @@ public class HomeController : Controller
         ViewBag.Message = "User sign up";
         return View();
     }
+
+    public ActionResult Login()
+    {
+        ViewBag.Message = "User login";
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]  
+    public ActionResult SignUp(UserModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            int recordsCreated = CreateUser(model.Username, model.Password, model.Mail);
+            return RedirectToAction("MainMenu", "Dashboard");
+        }
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public ActionResult Login(UserModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            
+            return RedirectToAction("MainMenu", "Dashboard");
+        }
+        return View();
+    }
+
 }

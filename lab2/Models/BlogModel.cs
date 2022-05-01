@@ -9,7 +9,7 @@ namespace lab2.Models
     {
         public string BlogId { get; set; }
         public string Title { get; set; }
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         public List<PostModel> Posts { get; set; }
     }
 }
