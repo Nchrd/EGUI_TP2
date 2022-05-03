@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PostModel>
+
+@{
+    ViewData["Title"] = "List of posts";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table class="table">
+            <thead style="text-align:center">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Title)</th>
+                    <th>@Html.DisplayNameFor(model => model.Content)</th>
+                    <th>@Html.DisplayNameFor(model => model.Date)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td class="align-middle" style="word-break:break-all">
+                            @Html.DisplayFor(modelItem => item.Content)
+                        </td>
+                        <td class="align-middle" style="text-align:center">
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,7 +1,0 @@
-﻿CREATE TABLE [dbo].[Blogs]
-(
-    [Id] INT NOT NULL PRIMARY KEY IDENTITY,
-    [UserId] INT NOT NULL,
-    [BlogId] NVARCHAR(50) NOT NULL,
-    [Title] NVARCHAR(50) NOT NULL,
-)

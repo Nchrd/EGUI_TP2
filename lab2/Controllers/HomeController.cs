@@ -30,13 +30,13 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
-    public ActionResult SignUp()
+    public IActionResult SignUp()
     {
         ViewBag.Message = "User sign up";
         return View();
     }
 
-    public ActionResult Login()
+    public IActionResult Login()
     {
         ViewBag.Message = "User login";
         return View();
@@ -65,5 +65,6 @@ public class HomeController : Controller
         }
         return View();
     }
+    
 
 }
