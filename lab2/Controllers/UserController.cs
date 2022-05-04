@@ -5,6 +5,7 @@ using lab2.Data.ViewModels;
 using lab2.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace lab2.Controllers
 {
@@ -23,36 +24,28 @@ namespace lab2.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _service.GetAll();
+            var data = await _service.GetAllAsync();
             return View(data);
         }
 
-        public IActionResult login() => View(new LoginVm());
+        public IActionResult Login() => View(new LoginVm());
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVm loginVm)
+        public IActionResult Login(LoginVm loginVm)
         {
             if (!ModelState.IsValid)
             {
                 return View(loginVm);
             }
 
-            var user = await _userManager.FindByEmailAsync(loginVm.Mail);
+            var user = _context.Users.Where(u => u.Mail == loginVm.Mail && u.Password == loginVm.Password).FirstOrDefault();
             if(user != null)
             {
-                var passwordCheck = await _userManager.CheckPasswordAsync(user, loginVm.Password);
-                if (passwordCheck)
-                {
-                    var result = await _signInManager.PasswordSignInAsync(user, loginVm.Password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index", "Blog");
-                    }
-                }
-                TempData["Error"] = "Wrong credentials, please try again";
-                return View(loginVm);
+                HttpContext.Session.SetString("user", JsonConvert.SerializeObject(user));
+
+                return RedirectToAction("Index", "Blog");
             }
             TempData["Error"] = "Wrong credentials, please try again";
             return View(loginVm);
@@ -61,19 +54,17 @@ namespace lab2.Controllers
         public IActionResult Register() => View(new RegisterVm());
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterVm registerVm)
+        public IActionResult Register(RegisterVm registerVm)
         {
             if(!ModelState.IsValid) return View(registerVm);
 
-            var user = await _userManager.FindByEmailAsync(registerVm.Mail);
-            if(user != null)
+            if (_context.Users.Where(u => u.Mail == registerVm.Mail).Any())
             {
                 TempData["Error"] = "This email is already taken !";
                 return View(registerVm);
             }
 
-            user = await _userManager.FindByNameAsync(registerVm.Username);
-            if(user != null)
+            if (_context.Users.Where(u => u.Username == registerVm.Username).Any())
             {
                 TempData["Error"] = "This username is already taken !";
                 return View(registerVm);
@@ -86,9 +77,10 @@ namespace lab2.Controllers
                 Password = registerVm.Password
             };
 
-            var newUserReponse = await _userManager.CreateAsync(newUser, registerVm.Password);
-
-            if (newUserReponse.Succeeded) await _userManager.AddToRoleAsync(newUser, UserRole.User);
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
+            _userManager.AddToRoleAsync(newUser, UserRole.User);
+            HttpContext.Session.SetString("user", JsonConvert.SerializeObject(newUser));
 
             return View("RegisterCompleted");
         }

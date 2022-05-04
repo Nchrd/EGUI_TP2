@@ -2,6 +2,7 @@
 
 namespace lab2.Data.ViewModels
 {
+    [Serializable]
     public class LoginVm
     {
         [Display(Name = "Email")]

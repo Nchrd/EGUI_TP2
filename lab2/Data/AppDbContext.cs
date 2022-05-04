@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using lab2.Models;
+using Microsoft.Data.SqlClient;
 
 namespace lab2.Data
 {

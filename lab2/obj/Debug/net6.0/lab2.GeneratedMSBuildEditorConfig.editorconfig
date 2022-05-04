@@ -23,30 +23,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Dashboard/CreateBlog.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZUJsb2cuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Dashboard/MainMenu.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1haW5NZW51LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Home/SignUp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/Post/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -65,6 +41,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/User/AccesDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBY2Nlc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/User/BlogList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCbG9nTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP2/lab2/Views/User/Index.cshtml]

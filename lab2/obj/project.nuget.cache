@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hj07LF/oYNnGtXER3grpnlFQfl9k3BR1mgXAoTjNnI0rVkpOADJ1aT8wSxZqaT98Niihy5hFMjCUbqpzdZU4XA==",
+  "dgSpecHash": "9QJrG2JlidyGJbDRVNC+42BLWuxtJMg5v6AYz9908STC9OcYpyeZwylG+PRADx4FpJHlEF6lXfblniDMA6iwcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ender\\OneDrive\\Documents\\GitHub\\EGUI_TP2\\lab2\\lab2.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\ender\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

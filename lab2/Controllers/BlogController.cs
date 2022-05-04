@@ -15,11 +15,10 @@ namespace lab2.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAllAsync();
             return View(data);
         }
 
-        //Get : Blog/Create
         public IActionResult Create()
         {
             return View();
@@ -33,8 +32,8 @@ namespace lab2.Controllers
                 return View(blog);
             }
 
-            await _service.AddAsync(blog)
-            return await Task.FromResult(RedirectToAction(nameof(Index)));
+            await _service.AddAsync(blog);
+            return await Task.FromResult(RedirectToAction("Index"));
         }
     }
 }

@@ -6,5 +6,9 @@ namespace lab2.Data.Services
 {
     public class UserService : EntityBaseRepository<UserModel>, IUserService
     {
+        public UserService(AppDbContext context) : base(context)
+        {
+
+        }
     }
 }

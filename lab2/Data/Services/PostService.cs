@@ -6,5 +6,9 @@ namespace lab2.Data.Services
 {
     public class PostService: EntityBaseRepository<PostModel>, IPostService
     {
+        public PostService(AppDbContext context) : base(context)
+        {
+
+        }
     }
 }

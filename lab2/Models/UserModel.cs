@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using lab2.Data.Base;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace lab2.Models
 {
-    public class UserModel:IdentityUser
+    [Serializable]
+    public class UserModel: IdentityUser, IEntityBase
     {
         [Key]
         public int Id { get; set; }
