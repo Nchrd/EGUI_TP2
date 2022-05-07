@@ -11,25 +11,26 @@
     <a asp-action="Create" asp-controller="Post" class="btn btn-primary">Add a new post</a>
     </p> 
 }
-<table class="table table-bordered table-hover">
-    <thead>
+
+<table class="table table-bordered table-hover" style="word-wrap:break-word; table-layout:fixed">
+    <thead style="text-align:center">
         <tr>
-            <th>
+            <th style="width:50px">
                 @Html.DisplayNameFor(model => model.Id)
             </th>
-            <th>
+            <th style="width:200px">
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Content)
             </th>
-            <th>
+            <th style="width:125px">
                 @Html.DisplayNameFor(model => model.Date)
             </th>
-            <th>
+            <th style="width:150px">
                 @Html.DisplayNameFor(model => model.Author)
             </th>
-            <th>Actions</th>
+            <th style="width:150px">Actions</th>
         </tr>
     </thead>
     <tbody>

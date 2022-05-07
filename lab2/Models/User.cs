@@ -17,8 +17,6 @@ namespace lab2.Models
         [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         public string? Password { get; set; }
-        public bool IsActive { get; set; }
-
         //Relationship
         public List<Blog>? Blogs { get; set; }
     }

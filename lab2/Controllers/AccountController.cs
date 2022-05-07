@@ -55,7 +55,7 @@ namespace lab2.Controllers
         {
             if(!ModelState.IsValid) return View("Login", loginVM);
 
-            var loginUser = _context.Users.Where(u => u.Username == loginVM.Username && u.Password == loginVM.Password && u.IsActive == true).FirstOrDefault();
+            var loginUser = _context.Users.Where(u => u.Username == loginVM.Username && u.Password == loginVM.Password).FirstOrDefault();
             if(loginUser == null)
             {
                 ModelState.AddModelError("Username", "Wrong identifiers, please try again");
