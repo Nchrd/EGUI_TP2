@@ -5,6 +5,25 @@
 - Data should be stored in text files (in \*.json format) in selected folder on the server
 - Please use Bootstrap for GUI design
 
+## Setup Instructions
+- Please first check your NuGet Packages to able to generate the solution
+- Packages required :
+  - EntityFramework (v 6.4.4)
+  - Microsoft.AspNetCore.Session (v 2.2.0)
+  - Microsoft.EntityFrameworkCore (v6.0.4)
+  - Microsoft.EntityFrameworkCore.Sql (v 6.0.4)
+  - Microsoft.EntityFrameworkCore.Tools (v 6.0.4)
+  - Microsoft.jQuery.Unobtrusive.Validation (v 3.2.12)
+  - Microsoft.VisualStudio.Web.CodeGeneration (v6.0.3) (not mandatory but recommended to edit a project easily in a general way)
+  - System.Configuration.ConfigurationManager (v 6.0.0)
+  - System.Data.SqlClient (v 4.8.3)
+  - Swashbuckle.AspNetCore (v 6.3.1)
+- You also need to create a database to store data (Microsoft SQL Server Management Studio is recommended for the setup)
+- Configuration process :
+  - Thanks to MSSMS create an empty database after connecting to your local SQL Server.
+  - In Visual Studio get the Connection string of the database from the SQL Object Explorer
+  - In AppSetting.json, App.Config and Web.Config change the "connectionString" field with your new connection string
+
 ### Application should store:
 - for the users:
   - userId - unique user id - text obtained from the user during user registration
