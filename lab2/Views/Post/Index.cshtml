@@ -1,35 +1,63 @@
-﻿@model IEnumerable<PostModel>
+﻿@model IEnumerable<lab2.Models.Post>
 
 @{
-    ViewData["Title"] = "List of posts";
+    ViewData["Title"] = "Posts list in blog";
 }
 
-<div class="row">
-    <div class="col-md-8 offset-md-2">
-        <table class="table">
-            <thead style="text-align:center">
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.Title)</th>
-                    <th>@Html.DisplayNameFor(model => model.Content)</th>
-                    <th>@Html.DisplayNameFor(model => model.Date)</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var item in Model)
+<h1>List of posts of the blog</h1>
+@if (Context.Session.GetString("UserId") != null)
+{
+    <p>
+    <a asp-action="Create" asp-controller="Post" class="btn btn-primary">Add a new post</a>
+    </p> 
+}
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @if (Context.Session.GetString("Username") == item.Author)
                 {
-                    <tr>
-                        <td class="align-middle">
-                            @Html.DisplayFor(modelItem => item.Title)
-                        </td>
-                        <td class="align-middle" style="word-break:break-all">
-                            @Html.DisplayFor(modelItem => item.Content)
-                        </td>
-                        <td class="align-middle" style="text-align:center">
-                            @Html.DisplayFor(modelItem => item.Date)
-                        </td>
-                    </tr>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new{@class="btn btn-primary"})
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new{@class="btn btn-danger"})
                 }
-            </tbody>
-        </table>
-    </div>
-</div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

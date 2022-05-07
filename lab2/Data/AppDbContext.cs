@@ -1,6 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using lab2.Models;
-using Microsoft.Data.SqlClient;
+﻿using lab2.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace lab2.Data
 {
@@ -11,8 +10,14 @@ namespace lab2.Data
 
         }
 
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<BlogModel> Blogs { get; set; }
-        public DbSet<PostModel> Posts { get; set; }
+        public AppDbContext()
+        {
+
+        }
+
+        public DbSet<User>? Users { get; set; }
+        public DbSet<Blog>? Blogs { get; set; }
+        public DbSet<Post>? Posts { get; set; }
+
     }
 }
